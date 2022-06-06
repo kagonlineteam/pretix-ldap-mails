@@ -4,9 +4,27 @@ against an ldap server. This does not verify the users password.<br>
 WARNING: This does verify that the user registering is the owner of the mail address.
 
 ## Usage
-1. Install 
-2. Configure in admin settings
-3. Enable the plugin for your event.
+1. Install python-ldap (`pip install python-ldap`)
+2. Install pretix-ldap-mails (`pip install pretix-ldap-mails`)
+3. Configure in admin settings
+4. Enable the plugin for your event.
+
+## Dev Setup
+### Run
+To run the plugin in your local dev installation
+```
+pip install python-ldap
+python setup.py develop
+make
+```
+Afterwards restart the development server
+
+### Build and Upload
+You need a local dev setup
+```
+python setup.py sdist
+twine upload dist/*.tar.gz
+```
 
 ## Security Conserns
 ### Query

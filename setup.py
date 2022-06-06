@@ -9,7 +9,7 @@ from pretix_ldap_mails import __version__
 
 try:
     with open(
-        os.path.join(os.path.dirname(__file__), "README.rst"), encoding="utf-8"
+        os.path.join(os.path.dirname(__file__), "README.md"), encoding="utf-8"
     ) as f:
         long_description = f.read()
 except Exception:

@@ -28,8 +28,10 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-      - name: Install pretix
-        run: pip3 install pretix
+      - name: Install LDAP dependencies
+        run: sudo apt update && sudo apt install libsasl2-dev python-dev libldap2-dev libssl-dev
+      - name: Install pretix and plugin dependencies
+        run: pip3 install pretix python-ldap
       - name: Install Dependencies
         run: pip3 install isort -Ue .
       - name: Run isort
@@ -49,8 +51,10 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-      - name: Install pretix
-        run: pip3 install pretix
+      - name: Install LDAP dependencies
+        run: sudo apt update && sudo apt install libsasl2-dev python-dev libldap2-dev libssl-dev
+      - name: Install pretix and plugin dependencies
+        run: pip3 install pretix python-ldap
       - name: Install Dependencies
         run: pip3 install flake8 -Ue .
       - name: Run flake8
@@ -71,8 +75,10 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-      - name: Install pretix
-        run: pip3 install pretix
+      - name: Install LDAP dependencies
+        run: sudo apt update && sudo apt install libsasl2-dev python-dev libldap2-dev libssl-dev
+      - name: Install pretix and plugin dependencies
+        run: pip3 install pretix python-ldap
       - name: Install Dependencies
         run: pip3 install black -Ue .
       - name: Run black
@@ -93,8 +99,10 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-      - name: Install pretix
-        run: pip3 install pretix
+      - name: Install LDAP dependencies
+        run: sudo apt update && sudo apt install libsasl2-dev python-dev libldap2-dev libssl-dev
+      - name: Install pretix and plugin dependencies
+        run: pip3 install pretix python-ldap
       - name: Install Dependencies
         run: pip3 install docformatter -Ue .
       - name: Run docformatter
@@ -115,8 +123,10 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-      - name: Install pretix
-        run: pip3 install pretix
+      - name: Install LDAP dependencies
+        run: sudo apt update && sudo apt install libsasl2-dev python-dev libldap2-dev libssl-dev
+      - name: Install pretix and plugin dependencies
+        run: pip3 install pretix python-ldap
       - name: Install Dependencies
         run: pip3 install twine check-manifest -Ue .
       - name: Run check-manifest
